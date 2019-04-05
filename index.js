@@ -3,14 +3,15 @@ $(document).ready(function() {
   $(".recipe-container").hide();
 
   function appendDrinkName(obj){
+    console.log(obj)
     for (var i=0; i < obj.drinks.length; i++){
 
       var drink = obj.drinks[i];
 
 
-       if (drink != ("#searchBar").val) {
+       if (drink !== $("#searchBar").val()) {
             //dont do the stuff below/return error msg
-            console.log("fuck")
+            console.log("no recipe")
         }
 
       $("#recipe-info").append("<h2>" + drink.strDrink + "</h2>")
@@ -35,12 +36,17 @@ $(document).ready(function() {
     $(".recipe-container").slideDown("slow");
     event.preventDefault()
 
-    var drinkSearch = $("#searchBar").val()
-    $.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkSearch, function(drinks){
+    var drinkSearch = $("#searchBar").val();
+
+    if(drinkSearch) {
+      $.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkSearch, function(drinks){
 
       appendDrinkName(drinks)
-    })
+      })
+    }else{
+      $("#recipe-info").append("<h2>" + "That is not a drink." + "</h2>")
 
+    }
   })
 
 

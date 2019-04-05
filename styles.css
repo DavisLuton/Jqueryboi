@@ -1,0 +1,87 @@
+html {
+  font-family: 'Heebo', 'sans serif';
+  color:white;
+}
+
+body{
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #ff4343, #fe444b, #fc4653, #fa485b, #f84b62);
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-size: 6em;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+
+form{
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+button{
+  font-family: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ff4343;
+  background-color: white;
+  font-size: 1em;
+  padding: 16px;
+  border: 5px solid transparent;
+}
+
+button:hover {
+  color: #6D2020;
+  border: 5px solid #6D2020;
+  cursor:pointer;
+  transition-duration: 0.2s;
+}
+
+label{
+  font-weight: bold;
+}
+
+input{
+  width: 25vw;
+  min-height: 2em;
+  margin: 0 1em 0 1em;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.container{
+}
+
+.form-container{
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-container{
+  margin: 5em 20em 0 20em;
+}
+
+#recipe-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#recipe-content{
+  margin-top: 3em;
+}
+
+#recipe-content li {
+  list-style: none;
+  font-weight: 400;
+  font-size: 1.7em;
+}
